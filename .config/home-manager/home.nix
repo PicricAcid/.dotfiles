@@ -52,4 +52,16 @@ in {
     source = ../wezterm;
     recursive = true;
   };
+
+  programs.git = {
+    enable = true;
+    userName = "PicricAcid";
+    userEmail = "horumuarudehidohorumarin012@gmail.com";
+
+    extraConfig = {
+      core = {
+        editor = "nvim";
+      };
+    };
+  };
 }
