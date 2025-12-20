@@ -4,8 +4,10 @@
   config,
   pkgs,
   ...
-}: let
+}: 
+let
   username = "picric_acid";
+  secrets = import ./secrets.nix;  
 in {
   nixpkgs = {
     overlays = [
@@ -22,6 +24,10 @@ in {
     
     stateVersion = "24.05";
   };
+
+  home.packages = with pkgs; [
+    claude-code
+  ];
 
   programs.home-manager.enable = true;
   
@@ -65,8 +71,8 @@ in {
     enable = true;
     settings = {
       user = {
-	name = "PicricAcid";
-	email = "horumuarudehidohorumain012@gmail.com";
+	name = secrets.gitName;
+	email = secrets.gitEmail;
       };
       core = {
         editor = "nvim";
