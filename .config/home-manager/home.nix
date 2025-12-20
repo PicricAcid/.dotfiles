@@ -43,5 +43,5 @@ in {
     initExtra = ''
       eval "$(starship init zsh)"
     '';
-  }
+  };
 }
