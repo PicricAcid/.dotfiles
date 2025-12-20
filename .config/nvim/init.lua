@@ -56,7 +56,7 @@ local function transparent_background()
     "MsgArea", "Pmenu", "TeleScopeBorder", "TelescopeNormal"
   }
   for _, hl in ipairs(highlights) do
-    vim.appi.nvim_set_hl(0, hl, { bg = "none" })
+    vim.api.nvim_set_hl(0, hl, { bg = "none" })
   end
 end
 
