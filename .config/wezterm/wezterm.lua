@@ -20,7 +20,7 @@ config.allow_square_glyphs_to_overflow_width = "WhenFollowedBySpace"
 config.window_background_opacity = 0.85
 config.macos_window_background_blur = 20
 config.hide_tab_bar_if_only_one_tab = true
-config.color_scheme = 'Bluloco Zsh Light (Gogh)'
+config.color_scheme = 'Gogh (Gogh)'
 --local mux = wezterm.mux
 --wezterm.on("gui-startup", function(cmd)
 --    local tab, pane, window = mux.spawn_window(cmd or {})

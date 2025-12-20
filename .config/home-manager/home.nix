@@ -30,6 +30,7 @@ in {
     
     plugins = with pkgs.vimPlugins; [
       nvim-treesitter.withAllGrammars
+      base16-vim
     ];
   };
 

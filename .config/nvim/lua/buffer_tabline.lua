@@ -1,8 +1,8 @@
 local api = vim.api
 
-vim.cmd("highlight TabLine gui=underline guibg=#dadada guifg=DarkCyan")
-vim.cmd("highlight TabLineSel gui=underline guibg=DarkCyan guifg=#dadada")
-vim.cmd("highlight TabLineFill gui=underline guibg=#dadada guifg=DarkCyan")
+vim.cmd("highlight TabLine gui=underline guibg=none guifg=DarkCyan")
+vim.cmd("highlight TabLineSel gui=underline guibg=DarkCyan guifg=black")
+vim.cmd("highlight TabLineFill gui=underline guibg=none guifg=DarkCyan")
 
 vim.o.tabline = "%!v:lua.BufferTabLine()"
 
