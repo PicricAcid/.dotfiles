@@ -51,7 +51,8 @@ vim.cmd('highlight TabLineSel guifg=black guibg=darkcyan')
 vim.cmd('highlight TabLineFill guifg=white guibg=darkcyan')
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = {"lua", "c"},
+  ensure_installed = {},
+  auto_install = false,
   highlight = {
     enable = true,
   },
