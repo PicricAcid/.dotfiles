@@ -24,5 +24,24 @@ in {
   };
 
   programs.home-manager.enable = true;
+  
   programs.neovim.enable = true;
+  xdg.configFile."nvim" = {
+    source = ./.config/nvim;
+    recursive = true;
+  };
+
+  programs.zsh = {
+    enable = true;
+    
+    shellAliases = {
+      vi = "nvim";
+      la = "ls -a";
+      ll = "ls -l";
+    };
+
+    initExtra = ''
+      eval "$(starship init zsh)"
+    '';
+  }
 }
