@@ -25,7 +25,14 @@ in {
 
   programs.home-manager.enable = true;
   
-  programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+    
+    plugins = with pkgs.vimPlugins; [
+      nvim-treesitter.withAllGrammars
+    ];
+  };
+
   xdg.configFile."nvim" = {
     source = ../nvim;
     recursive = true;
