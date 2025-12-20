@@ -1,0 +1,15 @@
+int
+float
+double
+char
+string
+function
+long
+void
+int*
+float*
+double*
+char*
+function*
+long*
+void*

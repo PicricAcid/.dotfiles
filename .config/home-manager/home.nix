@@ -8,6 +8,9 @@
   username = "picric_acid";
 in {
   nixpkgs = {
+    overlays = [
+      inputs.neovim-nightly-overlay.overlays.default
+    ];
     config = {
       allowUnfree = true;
     };
@@ -21,4 +24,5 @@ in {
   };
 
   programs.home-manager.enable = true;
+  programs.neovim.enable = true;
 }
