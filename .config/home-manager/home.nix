@@ -63,12 +63,13 @@ in {
   programs.git = {
     enable = true;
     settings = {
-      name = "PicricAcid";
-      email = "horumuarudehidohorumain012@gmail.com";
-    };
-
-    core = {
+      user = {
+	name = "PicricAcid";
+	email = "horumuarudehidohorumain012@gmail.com";
+      };
+      core = {
         editor = "nvim";
+      };
     };
   };
 }
