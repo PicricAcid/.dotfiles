@@ -50,6 +50,18 @@ vim.cmd('highlight TabLine guifg=white guibg=darkcyan')
 vim.cmd('highlight TabLineSel guifg=black guibg=darkcyan')
 vim.cmd('highlight TabLineFill guifg=white guibg=darkcyan')
 
+local function transparent_background()
+  local highlights = {
+    "Normal", "NormalFloat", "NomalNC", "SignColumn",
+    "MsgArea", "Pmenu", "TeleScopeBorder", "TelescopeNormal"
+  }
+  for _, hl in ipairs(highlights) do
+    vim.appi.nvim_set_hl(0, hl, { bg = "none" })
+  end
+end
+
+transparent_background()
+
 require('nvim-treesitter.configs').setup {
   ensure_installed = {},
   auto_install = false,
