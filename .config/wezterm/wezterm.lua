@@ -17,7 +17,7 @@ config.macos_forward_to_ime_modifier_mask = 'SHIFT|CTRL'
 -- 日本語文字幅の調整
 config.unicode_version = 14
 config.allow_square_glyphs_to_overflow_width = "WhenFollowedBySpace"
---config.window_background_opacity = 0.85
+config.window_background_opacity = 0.9
 --config.macos_window_background_blur = 20
 config.hide_tab_bar_if_only_one_tab = true
 config.color_scheme = 'Github'  -- Raycast_Lightの代わりに明るいスキーム
