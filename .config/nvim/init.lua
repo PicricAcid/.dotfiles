@@ -53,7 +53,8 @@ vim.cmd('highlight TabLineFill guifg=white guibg=darkcyan')
 local function transparent_background()
   local highlights = {
     "Normal", "NormalFloat", "NomalNC", "SignColumn",
-    "MsgArea", "Pmenu", "TeleScopeBorder", "TelescopeNormal"
+    "MsgArea", "ModeMsg", "MsgSeparator", "Pmenu", "TeleScopeBorder", "TelescopeNormal", "NonText", "EndOfBuffer", "StatusLine", "StatusLineNC",
+    "TabLine", "TabLineFill", "TabLineSel", "SignColumn",
   }
   for _, hl in ipairs(highlights) do
     vim.api.nvim_set_hl(0, hl, { bg = "none" })
