@@ -7,7 +7,9 @@
 }: 
 let
   username = "picric_acid";
-  secrets = import ./secrets.nix;  
+  secrets = if builtins.pathExists ./secrets.nix
+    then import ./secrets.nix
+    else { gitName = "Default Name"; gitEmail = "default@example.com"; };
 in {
   nixpkgs = {
     overlays = [
