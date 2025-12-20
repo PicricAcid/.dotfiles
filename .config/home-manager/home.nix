@@ -27,7 +27,7 @@ in {
   
   programs.neovim.enable = true;
   xdg.configFile."nvim" = {
-    source = ./.config/nvim;
+    source = ../nvim;
     recursive = true;
   };
 
@@ -39,9 +39,17 @@ in {
       la = "ls -a";
       ll = "ls -l";
     };
+  };
 
-    initExtra = ''
-      eval "$(starship init zsh)"
-    '';
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = builtins.fromTOML (builtins.readFile ../starship.toml);
+  };
+
+  programs.wezterm.enable = true;
+  xdg.configFile."wezterm" = {
+    source = ../wezterm;
+    recursive = true;
   };
 }
