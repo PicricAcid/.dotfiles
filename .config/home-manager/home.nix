@@ -79,6 +79,24 @@ in {
       core = {
         editor = "nvim";
       };
+      url = {
+        "git@github.com:" = {
+	  instedOf = "github.com";
+	};
+      };
+    };
+  };
+
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+
+    matchBlocks = {
+      "github.com" = {
+        hostname = "github.com";
+	user = "git";
+	identityFile = "~/.ssh/id_ed25519";
+      };
     };
   };
 }
