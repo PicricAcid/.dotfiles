@@ -1,4 +1,12 @@
-theme = Relaxed
+theme = TokyoNight Moon
 
 background-opacity = 0.85
 background-blur-radius = 20
+
+cursor-style = block
+cursor-style-blink = false
+
+keybind = ctrl+w>v=new_split:right
+keybind = ctrl+w>h=new_split:down
+keybind = ctrl+w>q=close_surface
+
