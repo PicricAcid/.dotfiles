@@ -67,9 +67,13 @@ in {
     settings = builtins.fromTOML (builtins.readFile ../starship.toml);
   };
 
-  programs.wezterm.enable = true;
   xdg.configFile."wezterm" = {
     source = ../wezterm;
+    recursive = true;
+  };
+
+  xdg.configFile."wezterm" = {
+    source = ../ghostty;
     recursive = true;
   };
 
