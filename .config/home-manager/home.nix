@@ -11,6 +11,10 @@ let
     then import ./secrets.nix
     else { gitName = "Default Name"; gitEmail = "default@example.com"; };
 in {
+	#imports = [
+    #./skill-hunter-packages.nix
+    #	];
+
   nixpkgs = {
     overlays = [
       inputs.neovim-nightly-overlay.overlays.default
