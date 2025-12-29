@@ -7,7 +7,7 @@ cursor-style = block
 cursor-style-blink = false
 
 font-family = "JetBrains Mono"
-font-family = "Osaka"
+font-family = "Noto Sans Mono CJK JP"
 font-size = 14
 font-feature = -dlig
 
