@@ -6,7 +6,10 @@ background-blur-radius = 20
 cursor-style = block
 cursor-style-blink = false
 
-font-family = "SF Mono"
+font-family = "JetBrains Mono"
+font-family = "Osaka"
+font-size = 14
+font-feature = -dlig
 
 keybind = ctrl+w>v=new_split:right
 keybind = ctrl+w>h=new_split:down
