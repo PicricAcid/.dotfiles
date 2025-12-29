@@ -72,7 +72,7 @@ in {
     recursive = true;
   };
 
-  xdg.configFile."wezterm" = {
+  xdg.configFile."ghostty" = {
     source = ../ghostty;
     recursive = true;
   };
