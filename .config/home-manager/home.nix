@@ -37,10 +37,12 @@ in {
       pname = "skill_hunter";
       version = "1.0.0";
       src = ./skill_hunter;   
-      vendorHash = "lib.fakeHash"; 
+      vendorHash = "sha256-+D5jLcFWr5djg36xaiHzPFPnZ6XFMPrr+QAj3WA/Yq8="; 
     })
   ];
 
+  xdg.configFile."skill_hunter/config.toml".source = ../skill_hunter.toml;
+  
   programs.home-manager.enable = true;
   
   programs.neovim = {
