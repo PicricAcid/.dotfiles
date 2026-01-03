@@ -1,5 +1,5 @@
 home_nix_path = '~/.dotfiles/.config/home-manager/home.nix'
-packages_file_path = '~/.dotfiles/.config/home-manager/skill-hunter-packages.nix'
+packages_file_path = '/Users/picric_acid/.dotfiles/.config/home-manager/skill-hunter-packages.nix'
 use_flake = true
 flake_path = '~/.dotfiles'
 flake_config = 'myHomeConfig'

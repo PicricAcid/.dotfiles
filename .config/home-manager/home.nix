@@ -11,9 +11,9 @@ let
     then import ./secrets.nix
     else { gitName = "Default Name"; gitEmail = "default@example.com"; };
 in {
-	#imports = [
-    #./skill-hunter-packages.nix
-    #	];
+    imports = [
+      ./skill-hunter-packages.nix
+    ];
 
   nixpkgs = {
     overlays = [
