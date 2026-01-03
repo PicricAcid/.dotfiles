@@ -11,9 +11,9 @@ let
     then import ./secrets.nix
     else { gitName = "Default Name"; gitEmail = "default@example.com"; };
 in {
-    imports = [
-      ./skill-hunter-packages.nix
-    ];
+  imports = [
+    ./skill-hunter-packages.nix
+  ];
 
   nixpkgs = {
     overlays = [
@@ -33,6 +33,12 @@ in {
 
   home.packages = with pkgs; [
     claude-code
+    (buildGoModule {
+      pname = "skill_hunter";
+      version = "1.0.0";
+      src = ./skill_hunter;   
+      vendorHash = "lib.fakeHash"; 
+    })
   ];
 
   programs.home-manager.enable = true;
