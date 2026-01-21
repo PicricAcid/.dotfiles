@@ -88,10 +88,22 @@ require('popup_menu_test')
 require('buffer_tabline')
 require('crucru')
 require('stickey')
-require('comment_bp')
+-- require('comment_bp')
+local grep = require('grep_all')
+
+vim.api.nvim_create_user_command(
+    "Grep",
+    function(opts)
+	grep.grep_all(opts)
+    end,
+    { nargs = "*" }
+)
+
 vim.api.nvim_create_autocmd("FileType", {
     pattern = {"json", "scheme"},
     callback = function()
 	vim.treesitter.stop()
     end,
 })
+
+
