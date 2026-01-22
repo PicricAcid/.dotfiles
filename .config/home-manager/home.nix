@@ -13,9 +13,7 @@ let
 in {
   imports = [
     ./focus-packages.nix
-  
-	./focus-packages.nix
-	];
+  ];
 
   nixpkgs = {
     overlays = [
