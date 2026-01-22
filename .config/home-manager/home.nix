@@ -37,7 +37,7 @@ in {
       pname = "focus";
       version = "1.0.0";
       src = ./focus;   
-      vendorHash = null; 
+      vendorHash = "sha256-+D5jLcFWr5djg36xaiHzPFPnZ6XFMPrr+QAj3WA/Yq8="; 
     })
   ];
 
