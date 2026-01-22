@@ -1,6 +1,6 @@
 { pkgs, ... }: {
-		home.packages = with pkgs; [
-			# focusでインストールしたパッケージ
-		];
-	}
-	
+	home.packages = with pkgs; [
+	nodejs
+	sshfs
+	];
+}
