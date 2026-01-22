@@ -1,3 +1,4 @@
 .config/home-manager/secrets.nix
 .config/home-manager/home.nix.bak
 .config/home-manager/focus-packages.nix.bak
+*.DS_Store
