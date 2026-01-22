@@ -12,7 +12,7 @@ let
     else { gitName = "Default Name"; gitEmail = "default@example.com"; };
 in {
   imports = [
-    ./skill-hunter-packages.nix
+    ./focus-packages.nix
   ];
 
   nixpkgs = {
@@ -34,14 +34,14 @@ in {
   home.packages = with pkgs; [
     claude-code
     (buildGoModule {
-      pname = "skill_hunter";
+      pname = "focus";
       version = "1.0.0";
-      src = ./skill_hunter;   
-      vendorHash = "sha256-+D5jLcFWr5djg36xaiHzPFPnZ6XFMPrr+QAj3WA/Yq8="; 
+      src = ./focus;   
+      vendorHash = null; 
     })
   ];
 
-  xdg.configFile."skill_hunter/config.toml".source = ../skill_hunter.toml;
+  xdg.configFile."focus/config.toml".source = ../focus.toml;
   
   programs.home-manager.enable = true;
   
