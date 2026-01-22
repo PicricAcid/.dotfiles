@@ -1,0 +1,5 @@
+home_nix_path = '~/.dotfiles/.config/home-manager/home.nix'
+packages_file_path = '/Users/picric_acid/.dotfiles/.config/home-manager/focus-packages.nix'
+use_flake = false
+flake_path = ''
+flake_config = ''
