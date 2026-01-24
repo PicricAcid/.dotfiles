@@ -16,8 +16,9 @@ set.wrapscan = true
 set.virtualedit = 'onemore'
 set.showmatch = true
 set.autoindent = true
+set.expandtab = true
 set.shiftwidth = 4
-set.softtabstop = 4
+set.tabstop = 4
 
 set.clipboard:append({"unnamedplus"})
 
