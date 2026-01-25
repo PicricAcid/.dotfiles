@@ -107,4 +107,22 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+-- gopls
+vim.lsp.config('gopls', {
+  cmd = { 'gopls' },
+  root_markers = { 'go.work', 'go.mod', '.git' },
+  filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+})
+
+vim.lsp.enable('gopls')
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+    local opts = { buffer = args.buf }
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+  end,
+})
 
