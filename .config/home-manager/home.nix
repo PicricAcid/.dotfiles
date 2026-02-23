@@ -87,19 +87,13 @@ in {
 
   programs.git = {
     enable = true;
-    settings = {
-      user = {
-	name = secrets.gitName;
-	email = secrets.gitEmail;
-      };
-      core = {
-        editor = "nvim";
-      };
-      url = {
-        "git@github.com:" = {
-	  instedOf = "github.com";
-	};
-      };
+    userName = secrets.gitName;
+    userEmail = secrets.gitEmail;
+
+    extraConfig = {
+      core.editor = "nvim";
+      url."git@github.com:".insteadOf = "github.com";
+      init.defaultBranch = "main";
     };
   };
 
@@ -110,8 +104,8 @@ in {
     matchBlocks = {
       "github.com" = {
         hostname = "github.com";
-	user = "git";
-	identityFile = "~/.ssh/id_ed25519";
+	    user = "git";
+	    identityFile = "~/.ssh/id_ed25519";
       };
     };
   };
