@@ -117,5 +117,8 @@ in {
   };
 
   programs.go.enable = true;
-  home.sessionPath = [ "$HOME/go/bin" ];
+  home.sessionPath = [ 
+    "$HOME/go/bin"
+    "$HOME/.local/bin"
+  ];
 }
