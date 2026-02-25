@@ -32,6 +32,7 @@ in {
   };
 
   home.packages = with pkgs; [
+    noto-fonts-cjk-sans
     claude-code
     (buildGoModule {
       pname = "focus";
@@ -40,6 +41,11 @@ in {
       vendorHash = "sha256-+D5jLcFWr5djg36xaiHzPFPnZ6XFMPrr+QAj3WA/Yq8="; 
     })
   ];
+
+  home.file."Library/Fonts/NotoSansCJK" = {
+    source = "${pkgs.noto-fonts-cjk-sans}/share/fonts/otf";
+    recursive = true;
+  };
 
   xdg.configFile."focus/config.toml".source = ../focus.toml;
   
@@ -87,13 +93,14 @@ in {
 
   programs.git = {
     enable = true;
-    userName = secrets.gitName;
-    userEmail = secrets.gitEmail;
-
-    extraConfig = {
-      core.editor = "nvim";
-      url."git@github.com:".insteadOf = "github.com";
-      init.defaultBranch = "main";
+    settings = {
+        user = {
+            name = secrets.gitName;
+            email = secrets.gitEmail;
+        };
+        core.editor = "nvim";
+        url."git@github.com:".insteadOf = "github.com";
+        init.defaultBranch = "main";
     };
   };
 
