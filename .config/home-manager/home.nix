@@ -32,7 +32,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    noto-fonts-cjk-sans
     claude-code
     (buildGoModule {
       pname = "focus";
@@ -41,11 +40,6 @@ in {
       vendorHash = "sha256-+D5jLcFWr5djg36xaiHzPFPnZ6XFMPrr+QAj3WA/Yq8="; 
     })
   ];
-
-  home.file."Library/Fonts/NotoSansCJK" = {
-    source = "${pkgs.noto-fonts-cjk-sans}/share/fonts/otf";
-    recursive = true;
-  };
 
   xdg.configFile."focus/config.toml".source = ../focus.toml;
   
