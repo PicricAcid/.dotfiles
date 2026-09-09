@@ -32,7 +32,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    claude-code
     (buildGoModule {
       pname = "focus";
       version = "1.0.0";
